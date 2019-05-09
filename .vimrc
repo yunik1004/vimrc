@@ -7,6 +7,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set backspace=indent,eol,start
 autocmd FileType make setlocal noexpandtab
 
 set nocompatible " be iMproved, required
@@ -38,14 +39,13 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-Plugin 'The-NERD-tree'
-
-Plugin 'taglist-plus'
+Plugin 'scrooloose/nerdtree'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'Raimondi/delimitMate'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -87,4 +87,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\.git$\|public$\|log$\|tmp$\|vendor$',
+  \ 'file': '\v\.(exe|so|dll)$'
+\ }
 
